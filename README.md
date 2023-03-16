@@ -57,29 +57,11 @@ curl -o- https://raw.githubusercontent.com/ryansereno/llama-google-cloud-dl/main
 
 (Sorry mac users; they use some array syntax in the script that isn't supported on the version of bash that ships with Mac.)
 
-Running random bash scripts generally isn't a good idea, but I'll stake my personal reputation on the fact that this link is safe. (It points to a specific SHA-1 hash rather than https://raw.githubusercontent.com/shawwn/llama-dl/main/llama.sh so that it's still safe even in the event that my repo or account got compromised.)
 
 ## How much space do I need?
 
 219G (235164838073 bytes) total. [Here's a file list](https://gist.github.com/shawwn/bddb2f91aa45fbcdc0dd105d88816e75) with sizes for each.
 
-## How do I know this is safe?
-
-I ran this:
-
-```
-mkdir LLaMA
-cd LLaMA
-time curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b1ad5a1d6ef30351f23c/llama.sh | bash
-cd ..
-webtorrent 'magnet:?xt=urn:btih:b8287ebfa04f879b048d4d4404108cf3e8014352&dn=LLaMA&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce'
-```
-
-[Webtorrent](https://github.com/webtorrent/webtorrent-cli) began seeding immediately, which means every file is identical to what you would've gotten via the torrent. So this is just a faster version of the torrent.
-
-<img width="310" alt="image" src="https://user-images.githubusercontent.com/59632/222940942-0051a645-b561-4f0b-878c-3d195354d526.png">
-
-<img width="310" alt="image" src="https://user-images.githubusercontent.com/59632/222941107-b4ef0b21-3fa7-40d1-ae56-cbe385e6ac00.png">
 
 ## How much faster? (Updated)
 
